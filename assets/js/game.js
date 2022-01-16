@@ -7,11 +7,6 @@ var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-console.log(enemyNames);
-console.log(enemyNames.length);
-console.log(enemyNames[0]);
-console.log(enemyNames[3]);
-
 // fight function
 var fight = function(enemyName) {
     while (playerHealth > 0 && enemyHealth > 0) {
@@ -71,13 +66,11 @@ var fight = function(enemyName) {
 
 //function to start a new game
 var startGame = function() {
-
-    var startGame = function() {
         // reset player stats
         playerHealth = 100;
         playerAttack = 10;
         playerMoney = 10;
-        };
+        
 
 // fight each enemy-robot by looping over them and fighting them one at a time
 for (var i = 0; i < enemyNames.length; i++) {
@@ -104,16 +97,9 @@ for (var i = 0; i < enemyNames.length; i++) {
       break;
     }
   }
-  }
-  var startGame = function() {
-    for (var i= 0; i < enemyNames.length; i++) {
-
-    }
-    // play again
-    // startGame();
-    
-    // after the loop ends, player is either out of health or enemies to fight, so run the endGame function
-    endGame();
+  
+  // after the loop ends, player is either out of health or enemies to fight, so run the endGame function
+  endGame();
 };
 
 // function to end the entire game
