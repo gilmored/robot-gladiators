@@ -60,7 +60,7 @@ while (playerInfo.health > 0 && enemy.health > 0) {
     
         var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
 
-        
+    // remove enemy's health by subtracting the amount we set in the damage variable
     enemy.health = Math.max(0, enemy.health - damage);
     console.log(
       playerInfo.name +
@@ -85,6 +85,10 @@ while (playerInfo.health > 0 && enemy.health > 0) {
       } else {
         window.alert(enemy.name + ' still has ' + enemy.health + ' health left.');
       }
+
+      // player gets attacked first
+    } else {
+        var damage = randomNumber(enemy.attack - 3, enemy.attack);
   
       // remove players's health by subtracting the amount set in the enemy.attack object
       var damage = randomNumber(enemy.attack - 3, enemy.attack);
